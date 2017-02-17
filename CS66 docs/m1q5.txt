@@ -1,0 +1,35 @@
+/*
+ *
+ Write the copy constructor for the Point class and write the copy assignment.
+ */
+
+class Point {
+public:
+    Point(int x = 0, int y = 0);
+    Point(const Point & t);
+    virtual ~Point();
+    
+    int getX() const;
+    int getY() const;
+    
+    Point& operator =( const Point& rhs );
+
+private:
+    int x, y;
+};
+
+
+//in point.cpp
+
+Point(const Point & p) 
+{ 
+    int x = p.x; 
+    int y = p.y; 
+
+}
+    
+
+
+//in point.h
+
+Point(const Point & p);

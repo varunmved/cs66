@@ -1,0 +1,70 @@
+class Node
+{
+public:
+    Node(float nodeContents)
+    {
+        leftNode = NULL;
+        rightNode = NULL;
+        this->nodeContents = nodeContents;
+    }
+    virtual ~Node() {};
+
+    Node * getLeftNode() const
+    {
+        return leftNode;
+    }
+    
+    Node * getRighttNode() const
+    {
+        return rightNode;
+    }
+
+    float getContents()
+    {
+        return nodeContents;
+    }
+
+private:
+	Node * leftNode;
+	Node * rightNode;
+	float nodeContents;
+};
+
+/*
+ *Whenever you have a template class, if you’re ever using that class as an object 
+ *or a return type, you need to use the template operators to tell the compiler 
+ *that that specific instance of the class is a template of a certain type
+ */
+
+template <class DataType>
+class Node
+{
+public:
+    Node(DataType nodeContents)
+    {
+        leftNode = NULL;
+        rightNode = NULL;
+        this->nodeContents = nodeContents;
+    }
+    virtual ~Node() {};
+
+    Node <DataType> * getLeftNode() const
+    {
+        return leftNode;
+    }
+    
+    Node <DataType> * getRighttNode() const
+    {
+        return rightNode;
+    }
+
+    DataType getContents()
+    {
+        return nodeContents;
+    }
+
+private:
+	Node<DataType> * leftNode;
+	Node<DataType> * rightNode;
+	DataType nodeContents;
+};

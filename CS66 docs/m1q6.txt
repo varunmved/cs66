@@ -1,0 +1,16 @@
+/*
+ *Write a function that receives a vector of floats and return a new vector of integers.
+*/ 
+
+vector <int> floatToInt(vector <float> floatVector)
+{
+    std::vector<int> intVector;
+
+	for(int = 0; i < floatVector.size(); i++)
+	{
+    	    intVector.push_back( (int)floatVector(i));
+	}
+    
+
+    return intVector;
+}

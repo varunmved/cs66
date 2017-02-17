@@ -1,0 +1,55 @@
+/*
+The < and == operators for the class Point have already been implemented for you. 
+Write the code necessary to complete the >, <=, >= and != operators.
+
+class Point {
+public:
+    Point(int x = 0, int y = 0);
+
+    int getX() const;
+    int getY() const;
+
+private:
+    int x, y;
+};
+
+
+*/
+
+
+
+bool operator >(const Point& p1, const Point& p2)
+{
+    if(p1.x < p2.x && p1.y < p2.y)
+	{
+	    return true;
+	}
+	else return false;
+}
+
+bool operator <=(const Point& p1, const Point& p2)
+{
+    if(p1.x =< p2.x && p1.y =< p2.y)
+	{
+	    return true;
+	}
+	else return false;
+}
+
+bool operator >=(const Point& p1, const Point& p2)
+{
+    if(p1.x >= && p1.y >= p2.y)
+	{
+	    return true;
+	}
+	else return false;
+}
+
+bool operator !=(const Point& p1, const Point& p2)
+{
+    if(p1.x != p2.x || p1.y != p2.y)
+	{
+	    return true;
+	}
+	else return false;
+}
